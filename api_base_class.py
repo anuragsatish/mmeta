@@ -4,6 +4,7 @@ import logging
 import requests
 import sys
 import time
+import uuid
 
 from beautifultable import BeautifulTable
 from pprint import pformat
@@ -22,17 +23,25 @@ logFileName = scriptName + "_" + dateTimeStamp + ".log"
 
 file_handler = logging.FileHandler(filename=logFileName, mode="w", encoding="utf-8")
 stdout_handler = logging.StreamHandler(sys.stdout)
-handlers = [file_handler, stdout_handler]
+log_handlers_list = [file_handler, stdout_handler]
 
 
 log = None
 
 
 class ApiBaseClass(TestCase):
+
+    """
+    Common base class for REST API testing
+    """
+
     @classmethod
     def setUpClass(cls) -> None:
+        """
+        Initialize class variables
+        """
         cls.mismatched_http_resp = "Mismatched http reponse"
-        cls.exception_msg = "Exception occurred in script execution"
+        cls.exception_msg = "Exception occurred during script execution"
         cls.pretty = "*" * 100
         cls.pretty_formatter = f"\n{cls.pretty}" * 3
         cls.start_tc = "START TC: %s"
@@ -42,7 +51,7 @@ class ApiBaseClass(TestCase):
         logging.basicConfig(
             level=getattr(logging, cls.args.log_level.upper()),
             format="%(asctime)s::%(filename)s::line-no %(lineno)d::%(levelname)s - %(message)s",
-            handlers=handlers,
+            handlers=log_handlers_list,
         )
         cls.log = logging.getLogger(__name__)
         global log
@@ -50,7 +59,7 @@ class ApiBaseClass(TestCase):
 
     def arguments(self) -> argparse.Namespace:
         """
-        Initialize default list of arguments using argparse
+        Initialize default list of arguments from command-line
         """
         arg_parser = argparse.ArgumentParser()
         arg_parser.add_argument(
@@ -228,7 +237,17 @@ class ApiBaseClass(TestCase):
             response = {}
         return eval_http, response
 
+    def random_uuid_string(self) -> str:
+        """
+        Return random uuid string of length: 8
+        """
+        return str(uuid.uuid4())[:8]
+
     def tearDown(self) -> None:
+        """
+        Close session if it exists
+        Print the logger filename where the results are stored
+        """
         if getattr(self, "session"):
             self.session.close()
         log.info(f"Test Results saved to: {logFileName}")
