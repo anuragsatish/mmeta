@@ -43,8 +43,8 @@ class ConversationsTesting(ApiBaseClass):
                 "put", self.new_conv["id"], name=f"name_{self.random_uuid_string()}_v2"
             )
             self.list_conversations()
-            # self.record_user_specified_conversation(self.new_conv["id"])
-            # self.record_user_specified_conversation(self.new_conv["id"], "stop")
+            self.record_user_specified_conversation(self.new_conv["id"])
+            self.record_user_specified_conversation(self.new_conv["id"], "stop")
             self.get_delete_user_specified_conversation("get", self.new_conv["id"])
             self.create_update_and_verify_user_details()
             if hasattr(self, "new_user"):

@@ -17,6 +17,7 @@ from unittest import TestCase
 # imports from user defined utils
 from endpoints import *
 
+
 scriptName = sys.argv[0].split("\\")[-1][0:-3]  # the script without the .py extension
 dateTimeStamp = time.strftime("%Y%m%d%H%M%S")  # in the format YYYYMMDDHHMMSS
 logFileName = scriptName + "_" + dateTimeStamp + ".log"

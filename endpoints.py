@@ -1,3 +1,4 @@
+
 def hierarchy(*params, join_with="/"):
     """Concatenate array elements with given string"""
     return join_with.join([str(elem) for elem in params])

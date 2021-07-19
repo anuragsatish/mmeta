@@ -1,0 +1,285 @@
+2021-07-19 22:41:16,159::vonage_api_tests.py::line-no 211::INFO - 
+****************************************************************************************************
+****************************************************************************************************
+****************************************************************************************************
+2021-07-19 22:41:16,160::vonage_api_tests.py::line-no 212::INFO - START TC: Create a conversation
+2021-07-19 22:41:16,160::vonage_api_tests.py::line-no 110::INFO - Payload:
+{'display_name': 'dp_name_ff559303',
+ 'image_url': 'https://example.com/image.png',
+ 'name': 'name_28ab838f',
+ 'properties': {'ttl': 60}}
+2021-07-19 22:41:18,228::api_base_class.py::line-no 236::INFO - 
+{'href': 'https://api.nexmo.com/v0.1/conversations/CON-9fd6d2cd-ab38-4459-a35b-74c6b3970794',
+ 'id': 'CON-9fd6d2cd-ab38-4459-a35b-74c6b3970794'}
+2021-07-19 22:41:18,229::vonage_api_tests.py::line-no 233::INFO - User able to create a conversation successfully
+2021-07-19 22:41:18,229::vonage_api_tests.py::line-no 242::INFO - END TC: Create a conversation
+2021-07-19 22:41:18,230::vonage_api_tests.py::line-no 211::INFO - 
+****************************************************************************************************
+****************************************************************************************************
+****************************************************************************************************
+2021-07-19 22:41:18,230::vonage_api_tests.py::line-no 212::INFO - START TC: Update a conversation
+2021-07-19 22:41:18,231::vonage_api_tests.py::line-no 110::INFO - Payload:
+{'display_name': 'dp_name_c76740ab',
+ 'image_url': 'https://example.com/image.png',
+ 'name': 'name_4fbac352_v2',
+ 'properties': {'ttl': 60}}
+2021-07-19 22:41:18,565::api_base_class.py::line-no 236::INFO - 
+{'href': 'https://api.nexmo.com/v0.1/conversations/CON-9fd6d2cd-ab38-4459-a35b-74c6b3970794',
+ 'id': 'CON-9fd6d2cd-ab38-4459-a35b-74c6b3970794'}
+2021-07-19 22:41:18,566::vonage_api_tests.py::line-no 233::INFO - User able to update a conversation successfully
+2021-07-19 22:41:18,566::vonage_api_tests.py::line-no 242::INFO - END TC: Update a conversation
+2021-07-19 22:41:18,566::vonage_api_tests.py::line-no 246::INFO - 
+****************************************************************************************************
+****************************************************************************************************
+****************************************************************************************************
+2021-07-19 22:41:18,567::vonage_api_tests.py::line-no 247::INFO - START TC: List all available conversations
+2021-07-19 22:41:18,947::api_base_class.py::line-no 236::INFO - 
+{'_embedded': {'conversations': [{'_links': {'self': {'href': 'https://api.nexmo.com/v0.1/conversations/CON-9fd6d2cd-ab38-4459-a35b-74c6b3970794'}},
+                                  'name': 'name_4fbac352_v2',
+                                  'uuid': 'CON-9fd6d2cd-ab38-4459-a35b-74c6b3970794'},
+                                 {'_links': {'self': {'href': 'https://api.nexmo.com/v0.1/conversations/CON-99ab360e-0ba9-4f93-8595-dcb1f0a91c84'}},
+                                  'name': 'NAM-d61c6ad4-4fdb-415e-88c0-cb4d7221d047',
+                                  'uuid': 'CON-99ab360e-0ba9-4f93-8595-dcb1f0a91c84'},
+                                 {'_links': {'self': {'href': 'https://api.nexmo.com/v0.1/conversations/CON-a9057108-ec1b-4091-9814-a800d50514f0'}},
+                                  'name': 'NAM-0bf0d7a4-3614-4382-bc23-dac01c886c39',
+                                  'uuid': 'CON-a9057108-ec1b-4091-9814-a800d50514f0'},
+                                 {'_links': {'self': {'href': 'https://api.nexmo.com/v0.1/conversations/CON-469077c8-86e0-409d-9911-007e22d2a3ac'}},
+                                  'name': 'NAM-0dc141af-ba4f-4d7c-b6e9-f21b2058ba1a',
+                                  'uuid': 'CON-469077c8-86e0-409d-9911-007e22d2a3ac'},
+                                 {'_links': {'self': {'href': 'https://api.nexmo.com/v0.1/conversations/CON-4275acc8-b290-419b-8824-7e4a55a630aa'}},
+                                  'name': 'NAM-189585d3-4bd4-4a22-8fe5-fbfb9095ecf7',
+                                  'uuid': 'CON-4275acc8-b290-419b-8824-7e4a55a630aa'}]},
+ '_links': {'self': {'href': 'https://api.nexmo.com/v0.1/conversations'}},
+ 'count': 5,
+ 'page_size': 10,
+ 'record_index': 0}
+2021-07-19 22:41:18,948::vonage_api_tests.py::line-no 261::INFO - User able to list all available conversations successfully
+2021-07-19 22:41:18,948::vonage_api_tests.py::line-no 269::INFO - END TC: List all available conversations
+2021-07-19 22:41:18,948::vonage_api_tests.py::line-no 305::INFO - 
+****************************************************************************************************
+****************************************************************************************************
+****************************************************************************************************
+2021-07-19 22:41:18,948::vonage_api_tests.py::line-no 306::INFO - START TC: Record user specified conversation using id with action:start
+2021-07-19 22:41:19,237::api_base_class.py::line-no 175::WARNING - Request method: PUT, 
+URL: 'https://api.nexmo.com/v1/conversations/CON-9fd6d2cd-ab38-4459-a35b-74c6b3970794/record'
+2021-07-19 22:41:19,238::api_base_class.py::line-no 176::WARNING - Request headers:
+{'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY1MjY5NTQsImV4cCI6MTY1ODA2Mjk1NCwianRpIjoiQ29USmJsWGI4ZGZSIiwiYXBwbGljYXRpb25faWQiOiJlYzQ1MGNjZS0xNTg1LTQ0YzctODBkOC03OGI5MGQwZjk5Y2MifQ.XHCNqa8yKDOJ-dE7QfwoePZDFrNakudqh1V-XNgizuWjWT4GI2eKLrZm4JrwvRjNHvlo9wBXK5ovT1Alj7WaSm-pYonDCm6fbM_vZZ-RFSbP7HZB7YCXKFbyfe3pWbgJSFyI3cpQLZakdVeXO-gitHGnPPdXpd358l_3N_9ZSRKmUwZtvfrWYgaUyRtf1GBkeOlGeLaM1E7k6otolsU19iFWoOE6_jDpclBkpQq33O7m6CtYjejxrLnjRm-Unx2e2hrKiR-4ka7pmCIc-Tc7Fv1br4wAA9N6w2L7_IhVr4ZMvIewhPS8roihtXj-sXpC3OgEOohkcwpf-Ez200CJ6A', 'Content-Length': '19'}
+2021-07-19 22:41:19,238::api_base_class.py::line-no 182::WARNING - Request body:
+{"action": "start"}
+2021-07-19 22:41:19,239::api_base_class.py::line-no 183::WARNING - Http Error:
+404 Client Error: Not Found for url: https://api.nexmo.com/v1/conversations/CON-9fd6d2cd-ab38-4459-a35b-74c6b3970794/record
+{"type":"NOT_FOUND","error_title":"Not Found"}
+2021-07-19 22:41:19,239::api_base_class.py::line-no 226::ERROR - Mismatched http reponse
+2021-07-19 22:41:19,239::api_base_class.py::line-no 236::INFO - 
+{'error_title': 'Not Found', 'type': 'NOT_FOUND'}
+2021-07-19 22:41:19,240::vonage_api_tests.py::line-no 319::ERROR - Unable to record user specified conversation using id with action:start
+2021-07-19 22:41:19,240::vonage_api_tests.py::line-no 330::INFO - END TC: Record user specified conversation using id with action:start
+2021-07-19 22:41:19,241::vonage_api_tests.py::line-no 305::INFO - 
+****************************************************************************************************
+****************************************************************************************************
+****************************************************************************************************
+2021-07-19 22:41:19,241::vonage_api_tests.py::line-no 306::INFO - START TC: Record user specified conversation using id with action:stop
+2021-07-19 22:41:19,866::api_base_class.py::line-no 175::WARNING - Request method: PUT, 
+URL: 'https://api.nexmo.com/v1/conversations/CON-9fd6d2cd-ab38-4459-a35b-74c6b3970794/record'
+2021-07-19 22:41:19,866::api_base_class.py::line-no 176::WARNING - Request headers:
+{'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY1MjY5NTQsImV4cCI6MTY1ODA2Mjk1NCwianRpIjoiQ29USmJsWGI4ZGZSIiwiYXBwbGljYXRpb25faWQiOiJlYzQ1MGNjZS0xNTg1LTQ0YzctODBkOC03OGI5MGQwZjk5Y2MifQ.XHCNqa8yKDOJ-dE7QfwoePZDFrNakudqh1V-XNgizuWjWT4GI2eKLrZm4JrwvRjNHvlo9wBXK5ovT1Alj7WaSm-pYonDCm6fbM_vZZ-RFSbP7HZB7YCXKFbyfe3pWbgJSFyI3cpQLZakdVeXO-gitHGnPPdXpd358l_3N_9ZSRKmUwZtvfrWYgaUyRtf1GBkeOlGeLaM1E7k6otolsU19iFWoOE6_jDpclBkpQq33O7m6CtYjejxrLnjRm-Unx2e2hrKiR-4ka7pmCIc-Tc7Fv1br4wAA9N6w2L7_IhVr4ZMvIewhPS8roihtXj-sXpC3OgEOohkcwpf-Ez200CJ6A', 'Content-Length': '18'}
+2021-07-19 22:41:19,867::api_base_class.py::line-no 182::WARNING - Request body:
+{"action": "stop"}
+2021-07-19 22:41:19,867::api_base_class.py::line-no 183::WARNING - Http Error:
+404 Client Error: Not Found for url: https://api.nexmo.com/v1/conversations/CON-9fd6d2cd-ab38-4459-a35b-74c6b3970794/record
+{"type":"NOT_FOUND","error_title":"Not Found"}
+2021-07-19 22:41:19,868::api_base_class.py::line-no 226::ERROR - Mismatched http reponse
+2021-07-19 22:41:19,868::api_base_class.py::line-no 236::INFO - 
+{'error_title': 'Not Found', 'type': 'NOT_FOUND'}
+2021-07-19 22:41:19,868::vonage_api_tests.py::line-no 319::ERROR - Unable to record user specified conversation using id with action:stop
+2021-07-19 22:41:19,868::vonage_api_tests.py::line-no 330::INFO - END TC: Record user specified conversation using id with action:stop
+2021-07-19 22:41:19,868::vonage_api_tests.py::line-no 274::INFO - 
+****************************************************************************************************
+****************************************************************************************************
+****************************************************************************************************
+2021-07-19 22:41:19,868::vonage_api_tests.py::line-no 275::INFO - START TC: Fetch user specified conversation using id
+2021-07-19 22:41:20,304::api_base_class.py::line-no 236::INFO - 
+{'_links': {'self': {'href': 'https://api.nexmo.com/v0.1/conversations/CON-9fd6d2cd-ab38-4459-a35b-74c6b3970794'}},
+ 'display_name': 'dp_name_c76740ab',
+ 'image_url': 'https://example.com/image.png',
+ 'members': [],
+ 'name': 'name_4fbac352_v2',
+ 'numbers': [],
+ 'properties': {'custom_data': {}, 'ttl': 60},
+ 'sequence_number': 1,
+ 'state': 'ACTIVE',
+ 'timestamp': {'created': '2021-07-19T17:11:17.783Z',
+               'updated': '2021-07-19T17:11:18.406Z'},
+ 'uuid': 'CON-9fd6d2cd-ab38-4459-a35b-74c6b3970794'}
+2021-07-19 22:41:20,304::vonage_api_tests.py::line-no 291::INFO - User able to fetch user specified conversation using id successfully
+2021-07-19 22:41:20,305::vonage_api_tests.py::line-no 299::INFO - END TC: Fetch user specified conversation using id
+2021-07-19 22:41:20,306::vonage_api_tests.py::line-no 343::INFO - 
+****************************************************************************************************
+****************************************************************************************************
+****************************************************************************************************
+2021-07-19 22:41:20,306::vonage_api_tests.py::line-no 344::INFO - START TC: Create and verify user details
+2021-07-19 22:41:20,307::vonage_api_tests.py::line-no 163::INFO - Payload:
+{'display_name': 'dp_user_name_3f7baf8e',
+ 'image_url': 'https://example.com/image.png',
+ 'name': 'user_f5995be9'}
+2021-07-19 22:41:20,786::api_base_class.py::line-no 236::INFO - 
+{'href': 'https://api.nexmo.com/v0.1/users/USR-8e8aab1b-c577-4f88-a0fd-7f74992587d8',
+ 'id': 'USR-8e8aab1b-c577-4f88-a0fd-7f74992587d8'}
+2021-07-19 22:41:20,787::vonage_api_tests.py::line-no 365::INFO - User able to create and verify user details successfully
+2021-07-19 22:41:20,787::vonage_api_tests.py::line-no 367::INFO - Fetch user details using id
+2021-07-19 22:41:21,196::api_base_class.py::line-no 236::INFO - 
+{'channels': {},
+ 'display_name': 'dp_user_name_3f7baf8e',
+ 'href': 'https://api.nexmo.com/v0.1/users/USR-8e8aab1b-c577-4f88-a0fd-7f74992587d8',
+ 'id': 'USR-8e8aab1b-c577-4f88-a0fd-7f74992587d8',
+ 'image_url': 'https://example.com/image.png',
+ 'name': 'user_f5995be9',
+ 'properties': {'custom_data': {}}}
+2021-07-19 22:41:21,197::vonage_api_tests.py::line-no 379::INFO - Able to fetch user details
+2021-07-19 22:41:21,197::vonage_api_tests.py::line-no 387::INFO - END TC: Create and verify user details
+2021-07-19 22:41:21,198::vonage_api_tests.py::line-no 343::INFO - 
+****************************************************************************************************
+****************************************************************************************************
+****************************************************************************************************
+2021-07-19 22:41:21,198::vonage_api_tests.py::line-no 344::INFO - START TC: Update and verify user details
+2021-07-19 22:41:21,199::vonage_api_tests.py::line-no 163::INFO - Payload:
+{'display_name': 'dp_user_name_199fe31d',
+ 'image_url': 'https://example.com/image.png',
+ 'name': 'user_93866aa8'}
+2021-07-19 22:41:21,509::api_base_class.py::line-no 236::INFO - 
+{'href': 'https://api.nexmo.com/v0.1/users/USR-8e8aab1b-c577-4f88-a0fd-7f74992587d8',
+ 'id': 'USR-8e8aab1b-c577-4f88-a0fd-7f74992587d8'}
+2021-07-19 22:41:21,510::vonage_api_tests.py::line-no 365::INFO - User able to update and verify user details successfully
+2021-07-19 22:41:21,510::vonage_api_tests.py::line-no 367::INFO - Fetch user details using id
+2021-07-19 22:41:21,994::api_base_class.py::line-no 236::INFO - 
+{'channels': {},
+ 'display_name': 'dp_user_name_199fe31d',
+ 'href': 'https://api.nexmo.com/v0.1/users/USR-8e8aab1b-c577-4f88-a0fd-7f74992587d8',
+ 'id': 'USR-8e8aab1b-c577-4f88-a0fd-7f74992587d8',
+ 'image_url': 'https://example.com/image.png',
+ 'name': 'user_93866aa8',
+ 'properties': {'custom_data': {}}}
+2021-07-19 22:41:21,994::vonage_api_tests.py::line-no 379::INFO - Able to fetch user details
+2021-07-19 22:41:21,995::vonage_api_tests.py::line-no 387::INFO - END TC: Update and verify user details
+2021-07-19 22:41:21,996::vonage_api_tests.py::line-no 414::INFO - 
+****************************************************************************************************
+****************************************************************************************************
+****************************************************************************************************
+2021-07-19 22:41:21,996::vonage_api_tests.py::line-no 415::INFO - START TC: List all conversations of a given user
+2021-07-19 22:41:22,426::api_base_class.py::line-no 236::INFO - 
+[]
+2021-07-19 22:41:22,426::vonage_api_tests.py::line-no 429::INFO - Able to get entire list of conversations for given user:USR-8e8aab1b-c577-4f88-a0fd-7f74992587d8
+2021-07-19 22:41:22,427::vonage_api_tests.py::line-no 436::INFO - END TC: List all conversations of a given user
+2021-07-19 22:41:22,427::vonage_api_tests.py::line-no 414::INFO - 
+****************************************************************************************************
+****************************************************************************************************
+****************************************************************************************************
+2021-07-19 22:41:22,428::vonage_api_tests.py::line-no 415::INFO - START TC: Get specified user details
+2021-07-19 22:41:22,720::api_base_class.py::line-no 236::INFO - 
+{'channels': {},
+ 'display_name': 'dp_user_name_199fe31d',
+ 'href': 'https://api.nexmo.com/v0.1/users/USR-8e8aab1b-c577-4f88-a0fd-7f74992587d8',
+ 'id': 'USR-8e8aab1b-c577-4f88-a0fd-7f74992587d8',
+ 'image_url': 'https://example.com/image.png',
+ 'name': 'user_93866aa8',
+ 'properties': {'custom_data': {}}}
+2021-07-19 22:41:22,721::vonage_api_tests.py::line-no 429::INFO - Able to get specified user:USR-8e8aab1b-c577-4f88-a0fd-7f74992587d8 details
+2021-07-19 22:41:22,722::vonage_api_tests.py::line-no 436::INFO - END TC: Get specified user details
+2021-07-19 22:41:22,722::vonage_api_tests.py::line-no 450::INFO - 
+****************************************************************************************************
+****************************************************************************************************
+****************************************************************************************************
+2021-07-19 22:41:22,723::vonage_api_tests.py::line-no 451::INFO - START TC: Create member details
+2021-07-19 22:41:22,724::vonage_api_tests.py::line-no 187::INFO - Payload:
+{'action': 'join',
+ 'channel': {'leg_id': 'a595959595959595995',
+             'leg_ids': [{'leg_id': 'a595959595959595995'}],
+             'type': 'app'},
+ 'user_id': 'USR-8e8aab1b-c577-4f88-a0fd-7f74992587d8'}
+2021-07-19 22:41:23,348::api_base_class.py::line-no 175::WARNING - Request method: POST, 
+URL: 'https://api.nexmo.com/v0.1/conversations/CON-9fd6d2cd-ab38-4459-a35b-74c6b3970794/members'
+2021-07-19 22:41:23,348::api_base_class.py::line-no 176::WARNING - Request headers:
+{'User-Agent': 'python-requests/2.22.0', 'Accept-Encoding': 'gzip, deflate', 'Accept': '*/*', 'Connection': 'keep-alive', 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY1MjY5NTQsImV4cCI6MTY1ODA2Mjk1NCwianRpIjoiQ29USmJsWGI4ZGZSIiwiYXBwbGljYXRpb25faWQiOiJlYzQ1MGNjZS0xNTg1LTQ0YzctODBkOC03OGI5MGQwZjk5Y2MifQ.XHCNqa8yKDOJ-dE7QfwoePZDFrNakudqh1V-XNgizuWjWT4GI2eKLrZm4JrwvRjNHvlo9wBXK5ovT1Alj7WaSm-pYonDCm6fbM_vZZ-RFSbP7HZB7YCXKFbyfe3pWbgJSFyI3cpQLZakdVeXO-gitHGnPPdXpd358l_3N_9ZSRKmUwZtvfrWYgaUyRtf1GBkeOlGeLaM1E7k6otolsU19iFWoOE6_jDpclBkpQq33O7m6CtYjejxrLnjRm-Unx2e2hrKiR-4ka7pmCIc-Tc7Fv1br4wAA9N6w2L7_IhVr4ZMvIewhPS8roihtXj-sXpC3OgEOohkcwpf-Ez200CJ6A', 'Content-Length': '182'}
+2021-07-19 22:41:23,349::api_base_class.py::line-no 182::WARNING - Request body:
+{"action": "join", "user_id": "USR-8e8aab1b-c577-4f88-a0fd-7f74992587d8", "channel": {"type": "app", "leg_id": "a595959595959595995", "leg_ids": [{"leg_id": "a595959595959595995"}]}}
+2021-07-19 22:41:23,350::api_base_class.py::line-no 183::WARNING - Http Error:
+400 Client Error: Bad Request for url: https://api.nexmo.com/v0.1/conversations/CON-9fd6d2cd-ab38-4459-a35b-74c6b3970794/members
+{"description":"Input validation failure.","error":{"0":["\"0\" must be a string"],"leg_id":["\"leg_id\" is not allowed"]},"code":"http:error:validation-fail"}
+2021-07-19 22:41:23,350::api_base_class.py::line-no 226::ERROR - Mismatched http reponse
+2021-07-19 22:41:23,351::api_base_class.py::line-no 236::INFO - 
+{'code': 'http:error:validation-fail',
+ 'description': 'Input validation failure.',
+ 'error': {'0': ['"0" must be a string'],
+           'leg_id': ['"leg_id" is not allowed']}}
+2021-07-19 22:41:23,352::vonage_api_tests.py::line-no 477::ERROR - Unable to create member details
+2021-07-19 22:41:23,352::vonage_api_tests.py::line-no 489::INFO - END TC: Create member details
+2021-07-19 22:41:23,353::vonage_api_tests.py::line-no 622::INFO - 
+****************************************************************************************************
+****************************************************************************************************
+****************************************************************************************************
+2021-07-19 22:41:23,353::vonage_api_tests.py::line-no 623::INFO - START TC: Get all leg-id details
+2021-07-19 22:41:23,804::api_base_class.py::line-no 236::INFO - 
+{'_embedded': {'legs': []},
+ '_links': {'self': {'href': 'https://api.nexmo.com/v0.1/legs'}},
+ 'count': 0,
+ 'page_size': 10,
+ 'record_index': 0}
+2021-07-19 22:41:23,805::vonage_api_tests.py::line-no 642::INFO - Able to get all leg-id details
+2021-07-19 22:41:23,805::vonage_api_tests.py::line-no 649::INFO - END TC: Get all leg-id details
+2021-07-19 22:41:23,805::vonage_api_tests.py::line-no 414::INFO - 
+****************************************************************************************************
+****************************************************************************************************
+****************************************************************************************************
+2021-07-19 22:41:23,805::vonage_api_tests.py::line-no 415::INFO - START TC: Delete specified user
+2021-07-19 22:41:24,166::api_base_class.py::line-no 236::INFO - 
+{}
+2021-07-19 22:41:24,167::vonage_api_tests.py::line-no 429::INFO - Able to delete specified user:USR-8e8aab1b-c577-4f88-a0fd-7f74992587d8
+2021-07-19 22:41:24,167::vonage_api_tests.py::line-no 436::INFO - END TC: Delete specified user
+2021-07-19 22:41:24,168::vonage_api_tests.py::line-no 274::INFO - 
+****************************************************************************************************
+****************************************************************************************************
+****************************************************************************************************
+2021-07-19 22:41:24,168::vonage_api_tests.py::line-no 275::INFO - START TC: Delete user specified conversation using id
+2021-07-19 22:41:24,679::api_base_class.py::line-no 236::INFO - 
+{}
+2021-07-19 22:41:24,679::vonage_api_tests.py::line-no 291::INFO - User able to delete user specified conversation using id successfully
+2021-07-19 22:41:24,680::vonage_api_tests.py::line-no 299::INFO - END TC: Delete user specified conversation using id
+2021-07-19 22:41:24,680::vonage_api_tests.py::line-no 88::INFO - 
+****************************************************************************************************
+****************************************************************************************************
+****************************************************************************************************Consolidated test report
+
+2021-07-19 22:41:24,687::vonage_api_tests.py::line-no 89::INFO - 
++------------------------------------+----------+--------+-------------------------------------------------------------------------+
+|              TestCase              | Expected | Actual |                                 Reason                                  |
++------------------------------------+----------+--------+-------------------------------------------------------------------------+
+|        create_conversation         |   Pass   |  Pass  |                                                                         |
++------------------------------------+----------+--------+-------------------------------------------------------------------------+
+|        update_conversation         |   Pass   |  Pass  |                                                                         |
++------------------------------------+----------+--------+-------------------------------------------------------------------------+
+|         list_conversations         |   Pass   |  Pass  |                                                                         |
++------------------------------------+----------+--------+-------------------------------------------------------------------------+
+| record_user_specified_conversation |   Pass   |  Fail  | Unable to record user specified conversation using id with action:start |
++------------------------------------+----------+--------+-------------------------------------------------------------------------+
+| record_user_specified_conversation |   Pass   |  Fail  | Unable to record user specified conversation using id with action:stop  |
++------------------------------------+----------+--------+-------------------------------------------------------------------------+
+| fetch_user_specified_conversation  |   Pass   |  Pass  |                                                                         |
++------------------------------------+----------+--------+-------------------------------------------------------------------------+
+|   create_and_verify_user_details   |   Pass   |  Pass  |                                                                         |
++------------------------------------+----------+--------+-------------------------------------------------------------------------+
+|   update_and_verify_user_details   |   Pass   |  Pass  |                                                                         |
++------------------------------------+----------+--------+-------------------------------------------------------------------------+
+|      list_user_conversations       |   Pass   |  Pass  |                                                                         |
++------------------------------------+----------+--------+-------------------------------------------------------------------------+
+|     get_specified_user_details     |   Pass   |  Pass  |                                                                         |
++------------------------------------+----------+--------+-------------------------------------------------------------------------+
+|  create_and_verify_member_details  |   Pass   |  Fail  |                     Unable to create member details                     |
++------------------------------------+----------+--------+-------------------------------------------------------------------------+
+|       get_all_leg_id_details       |   Pass   |  Pass  |                                                                         |
++------------------------------------+----------+--------+-------------------------------------------------------------------------+
+|       delete_specified_user        |   Pass   |  Pass  |                                                                         |
++------------------------------------+----------+--------+-------------------------------------------------------------------------+
+| delete_user_specified_conversation |   Pass   |  Pass  |                                                                         |
++------------------------------------+----------+--------+-------------------------------------------------------------------------+
+
+2021-07-19 22:41:24,688::api_base_class.py::line-no 276::INFO - Test Results saved to: vonage_api_tests_20210719224116.log
