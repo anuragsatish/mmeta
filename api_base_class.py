@@ -232,7 +232,7 @@ class ApiBaseClass(TestCase):
             else:
                 response = resp.text
             if not supress_output:
-                log.info(pformat(response))
+                log.info(f"\n{pformat(response)}")
         else:
             response = {}
         return eval_http, response
@@ -242,6 +242,28 @@ class ApiBaseClass(TestCase):
         Return random uuid string of length: 8
         """
         return str(uuid.uuid4())[:8]
+
+    def fetch_value_nested_dict(
+        self, key: str, dictionary: dict
+    ) -> Union[str, int, float, list, dict]:
+        """
+        This method will be used to parse complex json output
+        which has nested list and dictionaries and return first found dictionary key and its values
+        Arguments: key - The key whose value needs to be fetched
+                        from the dictinary
+        """
+
+        for k, v in dictionary.items():
+            if k == key:
+                yield v
+            elif isinstance(v, dict):
+                for result in self.fetch_value_nested_dict(key, v):
+                    yield result
+            elif isinstance(v, list):
+                for d in v:
+                    if isinstance(d, dict):
+                        for result in self.fetch_value_nested_dict(key, d):
+                            yield result
 
     def tearDown(self) -> None:
         """

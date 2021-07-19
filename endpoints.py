@@ -45,6 +45,7 @@ class Defaults:
     jwt_token = """eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJpYXQiOjE2MjY1MjY5NTQsImV4cCI6MTY1ODA2Mjk1NCwianRpIjoiQ29USmJsWGI4ZGZSIiwiYXBwbGljYXRpb25faWQiOiJlYzQ1MGNjZS0xNTg1LTQ0YzctODBkOC03OGI5MGQwZjk5Y2MifQ.XHCNqa8yKDOJ-dE7QfwoePZDFrNakudqh1V-XNgizuWjWT4GI2eKLrZm4JrwvRjNHvlo9wBXK5ovT1Alj7WaSm-pYonDCm6fbM_vZZ-RFSbP7HZB7YCXKFbyfe3pWbgJSFyI3cpQLZakdVeXO-gitHGnPPdXpd358l_3N_9ZSRKmUwZtvfrWYgaUyRtf1GBkeOlGeLaM1E7k6otolsU19iFWoOE6_jDpclBkpQq33O7m6CtYjejxrLnjRm-Unx2e2hrKiR-4ka7pmCIc-Tc7Fv1br4wAA9N6w2L7_IhVr4ZMvIewhPS8roihtXj-sXpC3OgEOohkcwpf-Ez200CJ6A"""
     # Log onto https://dashboard.nexmo.com/ to view application and its setting in developer dashboard
     log_level = "INFO"
+    CHANNELS_LIST = ["app", "phone", "sip", "websocket", "vbc"]
 
 
 class HTTP_CODES:
